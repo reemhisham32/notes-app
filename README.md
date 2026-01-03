@@ -144,4 +144,34 @@ Mounted EBS volume at /backup
 Backup file stored in /backup
 
 Terminal outputs for verification
+🏗️ Notes App Architecture & Data Flow
+        +-------------------+
+        |   Web Browser     |
+        |  (User Interface) |
+        +-------------------+
+                  |
+          HTTP Request (POST/GET)
+                  |
+                  v
+        +-------------------+
+        |   Flask App       |
+        |  (app.py)         |
+        +-------------------+
+                  |
+       +---------------------+
+       | PyMySQL / SQL       |
+       | Database Connector  |
+       +---------------------+
+                  |
+          SQL Queries (INSERT / SELECT)
+                  |
+                  v
+        +-------------------+
+        |    MariaDB DB     |
+        |   notesdb table   |
+        +-------------------+
+                  |
+       Optional Backup to EBS Volume
+        (/backup/notes_backup.sql)
+
 
