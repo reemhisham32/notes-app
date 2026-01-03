@@ -1,3 +1,5 @@
+Notes App – DevOps Project
+
 A simple web-based note-taking application deployed on AWS EC2 using Flask and MariaDB, with a persistent backup strategy using an attached EBS volume.
 
 📌 Project Overview
